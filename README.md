@@ -9,3 +9,23 @@ TaskFlowDAG，靈感來自於 [world4jason](https://github.com/world4jason) 提�
 4. **可視化工具**：提供了一個`visualize()`方法，讓開發者和團隊成員可以直觀地查看整個DAG的結構，有助於問題的定位和流程的理解。
 5. **Debug Mode**：使用者可以開啟調試模式，方便追踪和定位問題。
 
+
+## 使用方法
+
+## 安裝
+
+請安裝需要的套件：
+
+```bash
+pip install -r requirements.txt
+
+
+### 基本 DAG 流程範例
+請參考 basic.py。
+
+基本步驟為：
+
+1. 定義你的 DAG。
+2. 使用 @dag.node 裝飾器來標記每個節點函數。
+3. 連接各個節點來建立你的 DAG。
+4. 使用 dag.infer() 方法來執行 DAG。
