@@ -18,6 +18,7 @@ TaskFlowDAG，靈感來自於 [world4jason](https://github.com/world4jason) 提�
 
 ```bash
 pip install -r requirements.txt
+```
 
 
 ### 基本 DAG 流程範例
