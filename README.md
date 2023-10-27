@@ -30,3 +30,43 @@ pip install -r requirements.txt
 2. 使用 @dag.node 裝飾器來標記每個節點函數。
 3. 連接各個節點來建立你的 DAG。
 4. 使用 dag.infer() 方法來執行 DAG。
+
+### DataFrame DAG 流程範例
+請參考 df_dag_example.py。
+
+這個範例展示如何在 DAG 流程中使用 Pandas DataFrame。
+
+
+### 操作字典的 DAG 範例
+請參考 dict_example.py。
+
+基本步驟為：
+
+1. 初始化你的 DAG 和輸入數據。
+2. 使用 @dag.node 裝飾器來定義對字典的操作。
+3. 連接各個節點，建立 DAG 的流程。
+4. 使用 dag.infer() 方法來執行 DAG。
+
+
+### 單一分支決策 DAG 範例
+請參考 branch_decision_example.py。
+
+此範例教學：
+
+1. 初始化你的 DAG 和輸入的 DataFrame。
+2. 使用 @dag.node 和 @dag.decision 裝飾器來定義節點和決策。
+3. 根據條件創建分支，並連接相應的節點。
+4. 更新 DAG 的分支映射。
+5. 使用 dag.infer() 方法執行 DAG。
+
+
+### 多重分支決策 DAG 範例
+請參考 multi_branch_decision_example.py。
+
+此範例展示：
+
+1. 初始化你的 DAG 和輸入的 DataFrame。
+2. 使用 @dag.node 和 @dag.decision 裝飾器來定義多個節點和決策。
+3. 在多個條件基礎上創建分支，並連接相應的節點。
+4. 更新 DAG 的分支映射，確保正確的分支流程。
+5. 使用 dag.infer() 方法執行 DAG。
