@@ -31,11 +31,15 @@ pip install -r requirements.txt
 3. 連接各個節點來建立你的 DAG。
 4. 使用 dag.infer() 方法來執行 DAG。
 
+![dag](https://github.com/Mahopanda/TaskFlowDAG/blob/main/images/dag.png)
+
 ---
 ### DataFrame DAG 流程範例
 請參考 [df_dag_example.py]([https://github.com/Mahopanda/TaskFlowDAG/blob/main/examples/branch_decision_example.py](https://github.com/Mahopanda/TaskFlowDAG/blob/main/examples/df_dag_example.py))。
 
 這個範例展示如何在 DAG 流程中使用 Pandas DataFrame。
+
+![df_dag_example](https://github.com/Mahopanda/TaskFlowDAG/blob/main/images/df_dag_example.png)
 
 ---
 ### 操作字典的 DAG 範例
@@ -47,6 +51,8 @@ pip install -r requirements.txt
 2. 使用 @dag.node 裝飾器來定義對字典的操作。
 3. 連接各個節點，建立 DAG 的流程。
 4. 使用 dag.infer() 方法來執行 DAG。
+
+![dict_example](https://github.com/Mahopanda/TaskFlowDAG/blob/main/images/dict_example.png)
 
 ---
 ### 單一分支決策 DAG 範例
@@ -60,6 +66,8 @@ pip install -r requirements.txt
 4. 更新 DAG 的分支映射。
 5. 使用 dag.infer() 方法執行 DAG。
 
+![branch_decision_example](https://github.com/Mahopanda/TaskFlowDAG/blob/main/images/branch_decision_example.png)
+
 ---
 ### 多重分支決策 DAG 範例
 請參考 [multi_branch_decision_example.py](https://github.com/Mahopanda/TaskFlowDAG/blob/main/examples/multi_branch_decision_example.py)。
@@ -71,3 +79,5 @@ pip install -r requirements.txt
 3. 在多個條件基礎上創建分支，並連接相應的節點。
 4. 更新 DAG 的分支映射，確保正確的分支流程。
 5. 使用 dag.infer() 方法執行 DAG。
+
+![multi_branch_decision_example](https://github.com/Mahopanda/TaskFlowDAG/blob/main/images/multi_branch_decision_example.png)
