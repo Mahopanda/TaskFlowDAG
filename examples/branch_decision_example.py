@@ -65,5 +65,31 @@ dag.update_branch_map('filter_age', 'transform_for_db', 'transform_for_api')
 result = dag.infer(df)
 print(result)
 
+"""
+Node extract_data result:       name  age       job
+0    Alice   25  Engineer
+1      Bob   15   Student
+2  Charlie   35    Doctor
+3    David   50   Teacher
+Node transform_for_db result:       name  age       job
+0    ALICE   25  Engineer
+1      BOB   15   Student
+2  CHARLIE   35    Doctor
+3    DAVID   50   Teacher
+Node store_in_db result: Stored in DB!
+{'extract_data':       name  age       job
+0    ALICE   25  Engineer
+1      BOB   15   Student
+2  CHARLIE   35    Doctor
+3    DAVID   50   Teacher, 'filter_age':       name  age       job
+0    ALICE   25  Engineer
+1      BOB   15   Student
+2  CHARLIE   35    Doctor
+3    DAVID   50   Teacher, 'transform_for_db':       name  age       job
+0    ALICE   25  Engineer
+1      BOB   15   Student
+2  CHARLIE   35    Doctor
+3    DAVID   50   Teacher, 'store_in_db': 'Stored in DB!'}
+"""
 # 生成DAG結構視覺化圖
 dag.visualize(render=True)

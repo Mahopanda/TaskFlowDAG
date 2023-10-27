@@ -48,5 +48,23 @@ add_ten >> change_name >> reverse_attributes
 result_data = dag.infer(data)
 
 print(result_data)
+
+"""
+{
+    "add_ten": {
+        "numbers": [11, 12, 13, 14, 15],
+        "details": {"name": "Modified Sample", "attributes": ["c", "b", "a"]},
+    },
+    "change_name": {
+        "numbers": [11, 12, 13, 14, 15],
+        "details": {"name": "Modified Sample", "attributes": ["c", "b", "a"]},
+    },
+    "reverse_attributes": {
+        "numbers": [11, 12, 13, 14, 15],
+        "details": {"name": "Modified Sample", "attributes": ["c", "b", "a"]},
+    },
+}
+"""
+
 dag.visualize(render=True)  # 這會生成 DAG 的圖形表示，幫助使用者理解節點之間的關係。
 
